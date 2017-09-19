@@ -10,7 +10,7 @@ public class MonsterController
 	{
 		MarshmallowMonster sample = new MarshmallowMonster();
 		System.out.println(sample);
-		MarshmallowMonster realMonster = new MarshmallowMonster("Jery", 10, 10, 10, true);
+		MarshmallowMonster realMonster = new MarshmallowMonster("Jery", 8, 4, 4.7, true);
 	
 		System.out.println("Sheradon is hungry, so he is going to eat a tentac");
 		realMonster.setTentacleAmount(10);

@@ -11,7 +11,6 @@ public class MonsterDisplay
 	}
 	
 	public String getResponse(String textToDisplay)
-	
 	{
 		String response = "";
 		
@@ -19,4 +18,5 @@ public class MonsterDisplay
 		
 		return response;
 	}
+	
 }
