@@ -18,5 +18,11 @@ public class MonsterDisplay
 		
 		return response;
 	}
+
+	public void displayText(String string)
+	{
+
+		
+	}
 	
 }

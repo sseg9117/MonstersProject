@@ -9,7 +9,10 @@ public class MonsterController
 {
 	private MonsterDisplay popup;
 	
-	
+	public MonsterController()
+	{
+		popup = new MonsterDisplay();
+	}
 	
 	public void start()
 	{
@@ -70,7 +73,12 @@ public class MonsterController
 					currentMonster.setTentacleAmount(currentMonster.getTentacleAmount() - consumes );
 					System.out.println("Thank you so much! I only have this many tentacles now " + currentMonster.getTentacleAmount());
 				}
-					
+				
+				popup.displayText("Hey look at me!!!!");
+				String answer = popup.getResponse("how many meals are you eating today");
+				System.out.println(answer);
+				popup.displayText(answer);
+				
 		}
 }
 				
