@@ -48,23 +48,23 @@ public class MonsterController
 					Scanner myScanner2 = new Scanner(System.in);
 					int consumes = myScanner2.nextInt();
 								
-//				if(consumes > 10)
-//				{
-//					System.out.println("You cant eat more than 10 loser");
-//				}
-//				else if(consumes == 0)
-//				{
-//					System.out.println("you are not hungry i see");
-//				}
-//				else if(consumes > currentMonster.getTentacleAmount())
-//				{
-//					System.out.println(" I have " + currentMonster.getTentacleAmount());
-//				}
-//				else
-//				{
-//					currentMonster.setTentacleAmount(currentMonster.getTentacleAmount() - consumes );
-//					System.out.println("Thank you so much! I only have this many tentacles now " + currentMonster.getTentacleAmount());
-//				}
+				if(consumes > 10)
+				{
+					System.out.println("You cant eat more than 10 loser");
+				}
+				else if(consumes == 0)
+				{
+					System.out.println("you are not hungry i see");
+				}
+				else if(consumes > currentMonster.getTentacleAmount())
+				{
+					System.out.println(" I have " + currentMonster.getTentacleAmount());
+				}
+				else
+				{
+					currentMonster.setTentacleAmount(currentMonster.getTentacleAmount() - consumes );
+					System.out.println("Thank you so much! I only have this many tentacles now " + currentMonster.getTentacleAmount());
+				}
 					
 		}
 }
