@@ -1,4 +1,4 @@
-package monter.view;
+package monster.view;
 
 import javax.swing.JOptionPane;
 
