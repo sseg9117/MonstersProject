@@ -31,6 +31,7 @@ public class MonsterController
 	}
 		
 		private void interactWithTheMonster(MarshmallowMonster currentMonster)
+
 		{
 //			System.out.println(currentMonster.getName() + " wants to know what to eat next");
 			popup.displayText(currentMonster.getName() + "wants to know what to eat next ");
@@ -91,7 +92,29 @@ public class MonsterController
 				popup.displayText(answer);
 				
 		}
+
+		//Helper methods
+		private boolean isValidInteger(String sample)
+		{
+			boolean valid = false;
+			
+			try
+			{
+				Integer.parseInt(sample);
+				valid = true;
+			}
+			catch(NumberFormatException error)
+			{
+				popup.displayText("Only interger valuesre valid: " + sample + " isnot");
+			}
+			
+			return valid;
+		}
+
+
+
 }
 				
-					
+
+
 			
