@@ -1,8 +1,8 @@
 package monster.controller;
 
-import monster.model.MarshmallowMonster;
-import java.util.Scanner;
-import monster.view.MonsterDisplay;
+import monster.model.MarshmallowMonster;  //imports mashmallowmonster
+import java.util.Scanner; // imports scanner
+import monster.view.MonsterDisplay; // imports the display
 
 
 public class MonsterController
@@ -38,13 +38,18 @@ public class MonsterController
 //			System.out.println(currentMonster.getName() + " suggest arms, they have " + currentMonster.getArmCount());
 			popup.displayText(currentMonster.getName() + " suggest arms, they have " + currentMonster.getArmCount());
 //			System.out.println("How many do you want to eat?");
-		    int specialAnswer;
+		    int specialAnswer = 0;
 			
-			String unconverted = popup.getResponse(currentMonster.getName() + "How many do you want to eat?");
-			
+			String unconverted = popup.getResponse(currentMonster.getName() + "How many do you want to eat?");  //lets you have popup windo that asks question
+			if(isValidInteger(unconverted))
+			{
+				specialAnswer = Integer.parseInt(unconverted);  //lets you put the answer
+			}
 			specialAnswer = Integer.parseInt(unconverted);
 			
-			Scanner myScanner = new Scanner(System.in);
+			Scanner myScanner = new Scanner(System.in); // scanner
+			int consumed = 0;
+			consumed = specialAnswer;
 			int consumed = myScanner.nextInt();
 			
 				if(consumed < 0)
@@ -94,6 +99,7 @@ public class MonsterController
 		}
 
 		//Helper methods
+		//for Int
 		private boolean isValidInteger(String sample)
 		{
 			boolean valid = false;
@@ -105,13 +111,45 @@ public class MonsterController
 			}
 			catch(NumberFormatException error)
 			{
-				popup.displayText("Only interger valuesre valid: " + sample + " isnot");
+				popup.displayText("Only interger values are valid: " + sample + " is not");
 			}
 			
 			return valid;
 		}
-
-
+// for double
+		private boolean isValidDouble(String sampleDouble)
+		{
+			boolean valid = false;
+			
+			try
+			{
+				Double.parseDouble(sampleDouble);
+				valid = true;
+			}
+			catch (NumberFormatException error)
+			{
+				popup.displayText("Only double values are valid: " + sampleDouble + " is not.");
+			}
+			
+			return valid;
+			//for boolean
+		}
+		private boolean isValidBoolean(String sampleBoolean)
+		{
+			boolean valid = false;
+			
+			try
+			{
+				Boolean.parseBoolean(sampleBoolean);
+				valid = true;
+			}
+			catch (NumberFormatException error)
+			{
+				popup.displayText("Only true and flase are valid: " + sampleBoolean + " is not.");
+			}
+			
+			return valid;
+		}
 
 }
 				

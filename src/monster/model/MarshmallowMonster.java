@@ -29,7 +29,7 @@ public class MarshmallowMonster
 		return name;
 	}
 	
-	public int getEyeCount()
+	public int getEyeCount()  // all of these allow you to have those class things
 	{
 		return eyeCount;
 	}
@@ -79,7 +79,7 @@ public class MarshmallowMonster
 	}
 	public String toString()
 	{
-		String description = "Hi, I  a scary monster! My name is " + name + ", and i have " + eyeCount;
+		String description = "Hi, I  a scary monster! My name is " + name + ", and i have " + eyeCount;     // all the descriptions
 		description += " eyes and I have " + armCount + " arms, and I have " + tentacleAmount + " tentacles";
 		description += " and my bloop existence is " + hasBloop;
 		
