@@ -50,7 +50,6 @@ public class MonsterController
 			Scanner myScanner = new Scanner(System.in); // scanner
 			int consumed = 0;
 			consumed = specialAnswer;
-			int consumed = myScanner.nextInt();
 			
 				if(consumed < 0)
 				{
