@@ -7,7 +7,7 @@ public class MonsterDisplay
 	
 	public void displayText(String textToDisplay) 
 	{
-		JOptionPane.showMessageDialog(null, textToDisplay); //shows the message
+		JOptionPane.showMessageDialog(null, textToDisplay); //shows the message joption is the popup
 	}
 	
 	public String getResponse(String questionAsked) //lets you get the answer where they have to type
