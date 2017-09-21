@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class MonsterDisplay
 {
 	
-	public void displayxt(String textToDisplay)
+	public void displayText(String textToDisplay)
 	{
 		JOptionPane.showMessageDialog(null, textToDisplay);
 	}
@@ -19,10 +19,5 @@ public class MonsterDisplay
 		return response;
 	}
 
-	public void displayText(String string)
-	{
-
-		
-	}
 	
 }
