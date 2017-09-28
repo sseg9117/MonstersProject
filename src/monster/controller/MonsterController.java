@@ -52,7 +52,7 @@ public class MonsterController
 		for(MarshmallowMonster current : monsterList)
 		{
 			popup.displayText(current.getName());
-			String newName = popup.getResponse("What should my new new name be???");
+			String newName = popup.getResponse("What should my new new name be???");   //this is a for each loop
 			current.setName(newName);
 			popup.displayText(current.getName());
 		}
