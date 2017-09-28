@@ -30,7 +30,12 @@ public class MonsterController
 		popup.displayText(realMonster.toString());
 		popup.displayText("Sheradon is hungry, so he is going to eat a tentecle");
 		popup.displayText(realMonster.toString());
-		interactWithTheMonster(realMonster);
+		
+		monsterList.add(realMonster);
+		monsterList.add(sample);
+		testList();
+		
+//		interactWithTheMonster(realMonster);
 	}
 	
 	private void testList()
@@ -42,8 +47,14 @@ public class MonsterController
 			String newName = popup.getResponse("What should my new name be???");
 			currentMonster.setName(newName);
 			popup.displayText(currentMonster.getName());
-			
-	
+		}
+		
+		for(MarshmallowMonster current : monsterList)
+		{
+			popup.displayText(current.getName());
+			String newName = popup.getResponse("What should my new new name be???");
+			current.setName(newName);
+			popup.displayText(current.getName());
 		}
 	}
 		
@@ -57,8 +68,6 @@ public class MonsterController
 			popup.displayText(currentMonster.getName() + " suggest arms, they have " + currentMonster.getArmCount());
 //			System.out.println("How many do you want to eat?");
 		    int specialAnswer = 0;
-			monsterList.add(currentMonster);
-			monsterList.add(sample);
 			String unconverted = popup.getResponse(currentMonster.getName() + "How many do you want to eat?");  //lets you have popup windo that asks question
 			if(isValidInteger(unconverted))
 			{
