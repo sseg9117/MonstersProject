@@ -3,15 +3,18 @@ package monster.controller;
 import monster.model.MarshmallowMonster;  //imports mashmallowmonster
 import java.util.Scanner; // imports scanner
 import monster.view.MonsterDisplay; // imports the display
-
+import java.util.List;
+import java.util.ArrayList;
 
 public class MonsterController
 {
 	private MonsterDisplay popup;
-	
+	private List<MarshmallowMonster> monsterList;
 	public MonsterController()
 	{
 		popup = new MonsterDisplay();
+		//conctors inisilize data members
+		monsterList = new ArrayList<MarshmallowMonster>();
 	}
 	
 	public void start()
@@ -29,8 +32,23 @@ public class MonsterController
 		popup.displayText(realMonster.toString());
 		interactWithTheMonster(realMonster);
 	}
+	
+	private void testList()
+	{
+		for(int index = 0; index < monsterList.size(); index++)
+		{
+			MarshmallowMonster currentMonster = monsterList.get(index);
+			popup.displayText(currentMonster.getName());
+			String newName = popup.getResponse("What should my new name be???");
+			currentMonster.setName(newName);
+			popup.displayText(currentMonster.getName());
+			
+	
+		}
+	}
 		
 		private void interactWithTheMonster(MarshmallowMonster currentMonster)
+		
 
 		{
 //			System.out.println(currentMonster.getName() + " wants to know what to eat next");
@@ -39,7 +57,8 @@ public class MonsterController
 			popup.displayText(currentMonster.getName() + " suggest arms, they have " + currentMonster.getArmCount());
 //			System.out.println("How many do you want to eat?");
 		    int specialAnswer = 0;
-			
+			monsterList.add(currentMonster);
+			monsterList.add(sample);
 			String unconverted = popup.getResponse(currentMonster.getName() + "How many do you want to eat?");  //lets you have popup windo that asks question
 			if(isValidInteger(unconverted))
 			{
